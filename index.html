@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interview Q&A Knowledge Base</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1 data-i18n="appTitle">Interview KB</h1>
+        <div class="sidebar-actions">
+          <button id="lang-toggle" class="lang-toggle" title="Switch language">EN</button>
+          <button id="theme-toggle" data-i18n="toggleDark" data-i18n-attr="title" title="Toggle dark mode">☾</button>
+        </div>
+      </div>
+      <p class="sidebar-section-title" data-i18n="projects">Projects</p>
+      <ul id="project-list"></ul>
+    </aside>
+
+    <!-- Main content -->
+    <div class="main">
+
+      <!-- Topbar: workspace info + stack tabs + controls -->
+      <div class="topbar">
+        <div class="project-header">
+          <h2 id="project-title" data-i18n="selectProject">Select a project</h2>
+          <p id="project-desc"></p>
+        </div>
+
+        <!-- Stack tabs -->
+        <div id="stack-tabs" class="stack-tabs" role="tablist"></div>
+
+        <!-- Search + filters -->
+        <div class="controls">
+          <div class="search-wrap">
+            <span class="icon">⌕</span>
+            <input
+              type="search"
+              id="search-input"
+              data-i18n="searchPlaceholder"
+              data-i18n-attr="placeholder"
+              placeholder="Search questions & answers…"
+              autocomplete="off"
+            />
+          </div>
+
+          <select id="level-filter" aria-label="Filter by level">
+            <option value="all"          data-i18n="allLevels">All levels</option>
+            <option value="basic"        data-i18n="basic">Basic</option>
+            <option value="intermediate" data-i18n="intermediate">Intermediate</option>
+            <option value="advanced"     data-i18n="advanced">Advanced</option>
+          </select>
+
+          <button id="fav-toggle" title="Show saved favourites only" data-i18n="favourites">
+            ★ Favourites
+          </button>
+        </div>
+
+        <div id="tag-filter" aria-label="Filter by tag"></div>
+      </div>
+
+      <!-- Q&A list -->
+      <div class="qa-area">
+        <div class="qa-toolbar">
+          <span id="qa-count" class="qa-count"></span>
+        </div>
+        <div id="qa-list"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
