@@ -10,13 +10,6 @@ import { screenCastingPerformance } from "./projects/screen-casting/screen-casti
 
 export const workspaces = [
   {
-    id: "company-acme",
-    title: "Company Acme",
-    description: "Projects and resources related to frontend development at Company Acme.",
-    type: "company",
-    stacks: [javascriptFundamentals, reactConcepts, cssLayout],
-  },
-  {
     id: "screen-casting",
     title: "Screen Casting System",
     description: "Real-time P2P screen casting via WebRTC, Flutter & Wi-Fi Direct.",
